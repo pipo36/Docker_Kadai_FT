@@ -10,3 +10,4 @@ docker-compose exec mysql bash
 mysql -uroot -p
 <mysqlコマンド>
 show databases;
+show tables;
