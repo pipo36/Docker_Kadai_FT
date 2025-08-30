@@ -5,3 +5,6 @@ RUN apt-get update \
   && docker-php-ext-install pdo_mysql mysqli mbstring gd iconv
 
 RUN apt-get install -y vim
+
+COPY ./php_apache2.conf /etc/apache2/mods-enabled
+RUN apache2ctl restart

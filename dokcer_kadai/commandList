@@ -1,2 +1,7 @@
 起動コマンド:docker-compose up -d --build
 起動確認コマンド:docker-compose ps
+
+docker stop $(docker ps -q)
+docker rm $(docker ps -q -a)
+docker rmi $(docker images -q)
+docker volume rm $(docker volume ls -qf dangling=true)
