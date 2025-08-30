@@ -1,0 +1,2 @@
+起動コマンド:docker-compose up -d --build
+起動確認コマンド:docker-compose ps
