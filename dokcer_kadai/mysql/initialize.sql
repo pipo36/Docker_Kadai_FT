@@ -1,7 +1,8 @@
-CREATE USER 'data_kadai'@'localhost' IDENTIFIED BY 'data'
-select user,host from mysql.user;
-
+CREATE USER IF NOT EXISTS 'data_kadai'@'localhost' IDENTIFIED BY 'data'
 GRANT ALL PRIVILEGES ON *.* TO 'data_kadai'@'localhost';
+
+CREATE USER IF NOT EXISTS 'data_kadai'@'%' IDENTIFIED BY 'data'
+GRANT ALL PRIVILEGES ON *.* TO 'data_kadai'@'%';
 
 
 DROP DATABASE IF EXISTS kadai_db;
